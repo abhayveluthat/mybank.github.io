@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBank - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">🏦 MyBank Dashboard</h1>
+    <nav>
+      <a href="index.html" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <div class="welcome">
+      <h2>Welcome, <span id="userDisplay"></span> 👋</h2>
+      <p>Manage your money below:</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>💰 Balance</h3>
+        <p id="balance">₹0</p>
+      </div>
+      <div class="card">
+        <h3>📥 Deposit</h3>
+        <input type="number" id="depositAmount" placeholder="Enter amount" />
+        <button class="btn" onclick="deposit()">Deposit</button>
+      </div>
+      <div class="card">
+        <h3>📤 Withdraw</h3>
+        <input type="number" id="withdrawAmount" placeholder="Enter amount" />
+        <button class="btn" onclick="withdraw()">Withdraw</button>
+      </div>
+    </div>
+
+    <div class="transactions">
+      <h3>📄 Transaction History</h3>
+      <ul id="transactionList"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MyBank. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
